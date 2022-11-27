@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/FolderFragment">
+
+    <fragment
+        android:id="@+id/FolderFragment"
+        android:name="com.example.galleryapp.ui.folder.FolderFragment"
+        android:label="@string/folder_fragment_label"
+        tools:layout="@layout/fragment_gallery_folder">
+
+        <action
+            android:id="@+id/action_FolderFragment_to_PhotoListFragment"
+            app:destination="@id/PhotoListFragment" />
+        <action
+            android:id="@+id/action_FolderFragment_to_favoritePhotoListFragment"
+            app:destination="@id/favoritePhotoListFragment" />
+        <action
+            android:id="@+id/action_FolderFragment_to_videoListFragment"
+            app:destination="@id/videoListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/PhotoListFragment"
+        android:name="com.example.galleryapp.ui.photos.PhotoListFragment"
+        android:label="@string/photo_list_fragment_label"
+        tools:layout="@layout/fragment_photo_list">
+        <action
+            android:id="@+id/action_PhotoListFragment_to_photoFragment"
+            app:destination="@id/photoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/photoFragment"
+        android:name="com.example.galleryapp.ui.detail.PhotoFragment"
+        android:label="@string/photo_fragment_label"
+        tools:layout="@layout/fragment_photo" />
+
+    <fragment
+        android:id="@+id/favoritePhotoListFragment"
+        android:name="com.example.galleryapp.ui.favorite.FavoritePhotoListFragment"
+        android:label="@string/favorite_photo_list"
+        tools:layout="@layout/fragment_favorite_photo_list" >
+        <action
+            android:id="@+id/action_favoritePhotoListFragment_to_photoFragment"
+            app:destination="@id/photoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/videoListFragment"
+        android:name="com.example.galleryapp.ui.video.VideoListFragment"
+        android:label="@string/favorite_photo_list"
+        tools:layout="@layout/fragment_video_list" >
+        <action
+            android:id="@+id/action_videoListFragment_to_videoFragment"
+            app:destination="@id/videoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/videoFragment"
+        android:name="com.example.galleryapp.ui.video.VideoFragment"
+        android:label="VideoFragment" />
+</navigation>

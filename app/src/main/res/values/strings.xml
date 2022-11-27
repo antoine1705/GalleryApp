@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">GalleryApp</string>
+    <string name="folder_fragment_label">Folder Photos</string>
+    <string name="photo_list_fragment_label">Photo List</string>
+    <string name="photo_fragment_label">Photo</string>
+    <string name="photo_count">%d items</string>
+    <string name="my_favorite">My Favorite</string>
+    <string name="videos">Videos</string>
+    <string name="gallery_app">Gallery App</string>
+    <string name="add_favorite">Add Favorite</string>
+    <string name="favorite_photo_list">Favorite Photo List</string>
+    <string name="favorite_video_list">Favorite Video List</string>
+</resources>
